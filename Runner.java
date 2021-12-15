@@ -5,10 +5,11 @@
  * Marcelus Brown
  * 12/15/21
  */
+import java.util.*;
 public class Runner
 {
     public static void main( String args[])
     {
-        
+        Scanner keyboard = new Scanner(System.in);
     }
 }
