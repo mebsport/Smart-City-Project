@@ -1,8 +1,17 @@
 #BlueJ class context
 comment0.target=CentralPark
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ CentralPark\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=CentralPark()
 comment2.params=
-comment2.target=void\ centralPark()
-numComments=3
+comment2.target=java.lang.String\ run()
+comment3.params=a
+comment3.target=void\ goForARun(Person)
+comment4.params=a
+comment4.target=void\ goForAWalk(Person)
+comment5.params=a
+comment5.target=void\ haveAPicnic(Person)
+comment6.params=a
+comment6.target=void\ walkYourDog(Person)
+comment7.params=a
+comment7.target=void\ buyAHotdog(Person)
+numComments=8

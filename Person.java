@@ -11,7 +11,8 @@ public class Person
     private int age;
     private int cash;
     private boolean student;
-    private int thingsPlanned;
+    public static int thingsPlanned = 0;
+    Schedule plan;
     
     public Person (String n, int a, int c, boolean s)
     {
@@ -19,7 +20,13 @@ public class Person
         age = a;
         cash = c;
         student = s;
-        thingsPlanned = 0;
+    }
+    public Person ()
+    {
+        name = "  ";
+        age = 0;
+        cash = 0;
+        student = false;
     }
     
     public String getFirstName()
@@ -45,5 +52,17 @@ public class Person
     public int getNumThingsPlanned()
     {
         return thingsPlanned;
+    }
+    public void makeSchedule(int a)
+    {
+         plan = new Schedule(a);
+    }
+    public void addPlan(String activity)
+    {
+        plan.add(activity);
+    }
+    public void readSchedule()
+    {
+        plan.read();
     }
 }

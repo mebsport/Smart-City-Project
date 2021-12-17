@@ -28,9 +28,38 @@ public class Runner
         else student = false;
         Person user = new Person(name, age, cash, student);
         System.out.print("Welcome " + user.getFirstName());
-        System.out.println("How many things would you like to do this week? (5-10)");
+        System.out.println(" How many things would you like to do this week? (5-10)");
         int planNum = keyboard.nextInt();
-        Schedule plan = new Schedule(planNum);
-        System.out.println("Where would you like to start your vacation plan?");
+        user.makeSchedule(planNum);
+        CentralPark centralPark = new CentralPark();
+        Restaurant restaurant = new Restaurant();
+        StatueOfLiberty statueOfLiberty = new StatueOfLiberty();
+        
+        for(int i = 0; i <= planNum; i++)
+        {
+            System.out.println("Where would you like to start your vacation plan?");
+            System.out.println("1: Central Park");
+            System.out.println("2: Resturant");
+            System.out.println("3: Eiffel Tower");
+            System.out.println("Select an place by typing a number 1-3 and pressing enter");
+            int selection = keyboard.nextInt();
+            String activityPick;
+            if(selection == 1)
+            {
+                activityPick = centralPark.run();
+                user.addPlan(activityPick);
+            }
+            else if(selection == 2)
+            {
+                activityPick = restaurant.run();
+                user.addPlan(activityPick);
+            }
+            else
+            {
+                activityPick = statueOfLiberty.run();
+                user.addPlan(activityPick);
+            }
+        }
+        user.readSchedule();
     }
 }
